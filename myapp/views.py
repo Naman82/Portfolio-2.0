@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import FormInfo
+from .models import FormInfo, Resume
 # Create your views here.
 def index(request):
     if request.method == 'POST':
@@ -10,4 +10,7 @@ def index(request):
 
         query=FormInfo(name=name,email=email,subject=subject,message=message)
         query.save()
-    return render(request,'index.html')
+
+    resume=Resume.objects.all()
+    print(resume)
+    return render(request,'index.html',{'resume':resume})

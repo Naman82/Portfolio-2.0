@@ -9,3 +9,6 @@ class FormInfo(models.Model):
 
     def __str__(self):
         return self.name
+
+class Resume(models.Model):
+    file=models.FileField()
