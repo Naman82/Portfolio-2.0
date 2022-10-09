@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import FormInfo, Resume
+from django.http import FileResponse
 # Create your views here.
 def index(request):
     if request.method == 'POST':
@@ -11,6 +12,11 @@ def index(request):
         query=FormInfo(name=name,email=email,subject=subject,message=message)
         query.save()
 
-    resume=Resume.objects.all()
     # print(resume)
-    return render(request,'index.html',{'resume':resume})
+    return render(request,'index.html')
+
+def download(request):
+    obj = Resume.objects.all()
+    filename = obj.file.path
+    response = FileResponse(open(filename, 'rb'))
+    return response

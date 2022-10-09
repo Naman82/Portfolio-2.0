@@ -335,9 +335,9 @@
           </div>
         </div>
         <div class="text-center">
-          <!-- <p>{{resume.url}}</p> -->
+          <!-- <p>{{resume}}</p> -->
         
-          <a href="{{resume.file.url}}" class="btn btn-primary" download>Download Resume</a>
+          <a href="{% url 'download' %}" class="btn btn-primary" download>Download Resume</a>
         </div>
       </section>
 
@@ -783,12 +783,12 @@
     ></a>
 
     <!-- Vendor JS Files -->
-    <script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script>
+    <!-- <script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script> -->
     <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
     <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
     <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-    <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <!-- <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script> -->
     <script src="{% static 'assets/vendor/typed.js/typed.min.js' %}"></script>
     <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
     <!-- <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script> -->
