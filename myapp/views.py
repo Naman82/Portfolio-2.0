@@ -11,6 +11,6 @@ def index(request):
         query=FormInfo(name=name,email=email,subject=subject,message=message)
         query.save()
 
-    resume=Resume.objects.all().first()
+    resume=Resume.objects.all()
     # print(resume)
     return render(request,'index.html',{'resume':resume})
