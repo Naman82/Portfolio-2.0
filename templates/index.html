@@ -336,7 +336,9 @@
         </div>
         <div class="text-center">
           <!-- <p>{{resume.url}}</p> -->
-          <a download="{{resume.url}}" class="btn btn-primary">Download Resume</a>
+          {% for document in resume %}
+          <a href="{{document.file.url}}" class="btn btn-primary" download>Download Resume</a>
+          {% endfor %}
         </div>
       </section>
 
