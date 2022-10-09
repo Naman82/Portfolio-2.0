@@ -12,5 +12,5 @@ def index(request):
         query.save()
 
     resume=Resume.objects.all()
-    print(resume)
+    # print(resume)
     return render(request,'index.html',{'resume':resume})
